@@ -2,7 +2,7 @@ import { MapPin } from "lucide-react";
 
 const stats = [
   { value: "2025", label: "Founded in Pittsburgh" },
-  { value: "TDB", label: "Seed Funding" },
+  { value: "TBD", label: "Seed Funding" },
   { value: "4", label: "Team Members" },
   { value: "1", label: "Patents Filed" },
 ];
@@ -31,7 +31,7 @@ export function About() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
+        <div className="grid md:grid-cols-2 gap-12 mb-16 items-start">
           <div>
             <h3 className="mb-4">Our Story</h3>
             <p className="text-gray-600 mb-4">
@@ -57,17 +57,21 @@ export function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
+          <dl className="grid grid-cols-2 gap-4 sm:gap-5">
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="bg-white p-6 rounded-xl shadow-sm"
+                className="flex flex-col justify-center bg-white rounded-xl border border-slate-200/80 px-6 py-8 sm:px-8 sm:py-10 shadow-[0_1px_2px_rgba(15,23,42,0.04)]"
               >
-                <div className="text-cyan-700 mb-2">{stat.value}</div>
-                <div className="text-gray-500 text-sm">{stat.label}</div>
+                <dt className="order-2 mt-4 text-lg sm:text-xl text-gray-600 leading-snug">
+                  {stat.label}
+                </dt>
+                <dd className="order-1 text-5xl sm:text-6xl font-semibold tracking-tight text-cyan-700 leading-none tabular-nums">
+                  {stat.value}
+                </dd>
               </div>
             ))}
-          </div>
+          </dl>
         </div>
 
         <div className="bg-white p-12 rounded-xl text-center">
