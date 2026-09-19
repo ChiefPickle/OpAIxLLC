@@ -11,9 +11,8 @@ import { createNoise3D } from "simplex-noise";
 
 const WAVE_COLORS = ["#06b6d4", "#14b8a6", "#0891b2", "#0e7490", "#22d3ee"];
 const WAVE_WIDTH = 50;
-const BACKGROUND_FILL = "#0f172a";
 const BLUR_PX = 10;
-const WAVE_OPACITY = 0.3;
+const WAVE_OPACITY = 0.55;
 const SPEED = 0.001;
 const WAVE_COUNT = 5;
 
@@ -38,9 +37,12 @@ export function HeroWave({ children }: HeroWaveProps) {
     advance = true,
   ) => {
     const noise = noiseRef.current;
-    ctx.fillStyle = BACKGROUND_FILL;
+    const prevFilter = ctx.filter;
+    ctx.filter = "none";
+    ctx.globalAlpha = 1;
+    ctx.clearRect(0, 0, w, h);
+    ctx.filter = prevFilter;
     ctx.globalAlpha = WAVE_OPACITY;
-    ctx.fillRect(0, 0, w, h);
 
     if (advance) ntRef.current += SPEED;
     for (let i = 0; i < WAVE_COUNT; i += 1) {
@@ -54,6 +56,7 @@ export function HeroWave({ children }: HeroWaveProps) {
       ctx.stroke();
       ctx.closePath();
     }
+    ctx.globalAlpha = 1;
   }, []);
 
   useEffect(() => {
@@ -61,13 +64,13 @@ export function HeroWave({ children }: HeroWaveProps) {
     const wrapper = wrapperRef.current;
     if (!canvas || !wrapper) return;
 
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d", { alpha: true });
     if (!ctx) return;
 
-    setIsSafari(
+    const safari =
       navigator.userAgent.includes("Safari") &&
-        !navigator.userAgent.includes("Chrome"),
-    );
+      !navigator.userAgent.includes("Chrome");
+    setIsSafari(safari);
 
     const reduceMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
@@ -78,7 +81,7 @@ export function HeroWave({ children }: HeroWaveProps) {
       const height = Math.max(1, Math.floor(wrapper.clientHeight || window.innerHeight));
       canvas.width = width;
       canvas.height = height;
-      ctx.filter = `blur(${BLUR_PX}px)`;
+      ctx.filter = safari ? "none" : `blur(${BLUR_PX}px)`;
     };
 
     const loop = (now: number) => {
@@ -135,13 +138,17 @@ export function HeroWave({ children }: HeroWaveProps) {
   return (
     <div
       ref={wrapperRef}
-      className="h-screen min-h-screen flex flex-col items-center justify-center"
+      className="relative h-screen min-h-screen flex flex-col items-center justify-center"
     >
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 z-0 pointer-events-none h-full w-full"
+        className="absolute inset-0 z-0 pointer-events-none h-full w-full bg-transparent"
         aria-hidden
-        style={isSafari ? { filter: `blur(${BLUR_PX}px)` } : undefined}
+        style={
+          isSafari
+            ? { filter: `blur(${BLUR_PX}px)`, backgroundColor: "transparent" }
+            : { backgroundColor: "transparent" }
+        }
       />
       <div className="relative z-10">{children}</div>
     </div>
