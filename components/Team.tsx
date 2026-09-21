@@ -11,7 +11,7 @@ const team = [
     name: "Dr. Jacques Chelly",
     role: "Co-Founder & CMO",
     photo: "/team/jacques.jpg",
-    bio: "Dr. Chelly has over 30 years of clinical research experience and developed the Department of Anesthesiology and Perioperative Medicine\u2019s Clinical Research Program, which has enrolled thousands of research subjects since July 2002.",
+    bio: "Dr. Chelly has over 30 years of clinical research experience. Since 2002, he has conducted his research at the University of Pittsburgh, where he developed the Department of Anesthesiology and Perioperative Medicine\u2019s Clinical Research Program. Since its establishment in July 2002, the program has enrolled thousands of research subjects.",
   },
   {
     name: "Yan Chelly",
