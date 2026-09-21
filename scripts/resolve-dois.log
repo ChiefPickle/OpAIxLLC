@@ -1,0 +1,48 @@
+resolve-dois run 2026-09-21T13:03:51.558Z
+threshold=0.9 source=content/publications.json
+
+[wardhan-2017] Crossref https://api.crossref.org/works?query.bibliographic=Recent%20advances%20in%20acute%20pain%20management%3A%20understanding%20the%20mechanisms%20of%20acute%20pain%2C%20the%20prescription%20of%20opioids%2C%20and%20the%20role%20of%20multimodal%20pain%20therapy&rows=3
+[wardhan-2017] Crossref returned 3 item(s)
+[wardhan-2017] candidate doi=10.12688/f1000research.12286.1 year=2017 titleSim=1.000 journalOk=true title="Recent advances in acute pain management: understanding the mechanisms of acute pain, the prescription of opioids, and the role of multimodal pain therapy" journal=["F1000Research"]
+[wardhan-2017] ACCEPTED DOI 10.12688/f1000research.12286.1
+
+[belfer-2014] Crossref https://api.crossref.org/works?query.bibliographic=The%20design%20and%20methods%20of%20genetic%20studies%20on%20acute%20and%20chronic%20postoperative%20pain%20in%20patients%20after%20total%20knee%20replacement&rows=3
+[belfer-2014] Crossref returned 3 item(s)
+[belfer-2014] candidate doi=10.1111/pme.12487 year=2014 titleSim=1.000 journalOk=true title="The Design and Methods of Genetic Studies on Acute and Chronic Postoperative Pain in Patients after Total Knee Replacement" journal=["Pain Medicine"]
+[belfer-2014] ACCEPTED DOI 10.1111/pme.12487
+
+[dai-2013] Crossref https://api.crossref.org/works?query.bibliographic=Integration%20of%20pain%20score%20and%20morphine%20consumption%20in%20analgesic%20clinical%20studies&rows=3
+[dai-2013] Crossref returned 3 item(s)
+[dai-2013] candidate doi=10.1016/j.jpain.2013.04.004 year=2013 titleSim=1.000 journalOk=true title="Integration of Pain Score and Morphine Consumption in Analgesic Clinical Studies" journal=["The Journal of Pain"]
+[dai-2013] ACCEPTED DOI 10.1016/j.jpain.2013.04.004
+
+[jouguelet-lacoste-2015] Crossref https://api.crossref.org/works?query.bibliographic=The%20use%20of%20intravenous%20infusion%20or%20single%20dose%20of%20low-dose%20ketamine%20for%20postoperative%20analgesia%3A%20a%20review%20of%20the%20current%20literature&rows=3
+[jouguelet-lacoste-2015] Crossref returned 3 item(s)
+[jouguelet-lacoste-2015] candidate doi=10.1111/pme.12619 year=2015 titleSim=1.000 journalOk=true title="The Use of Intravenous Infusion or Single Dose of Low-Dose Ketamine for Postoperative Analgesia: A Review of the Current Literature" journal=["Pain Medicine"]
+[jouguelet-lacoste-2015] ACCEPTED DOI 10.1111/pme.12619
+
+[jacobs-2021] Crossref https://api.crossref.org/works?query.bibliographic=Large%20reduction%20in%20opioid%20prescribing%20by%20a%20multipronged%20behavioral%20intervention%20after%20major%20urologic%20surgery&rows=3
+[jacobs-2021] Crossref returned 3 item(s)
+[jacobs-2021] candidate doi=10.1002/cncr.33200 year=2021 titleSim=1.000 journalOk=true title="Large reduction in opioid prescribing by a multipronged behavioral intervention after major urologic surgery" journal=["Cancer"]
+[jacobs-2021] ACCEPTED DOI 10.1002/cncr.33200
+
+[chelly-2001] Crossref https://api.crossref.org/works?query.bibliographic=Continuous%20femoral%20blocks%20improve%20recovery%20and%20outcome%20of%20patients%20undergoing%20total%20knee%20arthroplasty&rows=3
+[chelly-2001] Crossref returned 3 item(s)
+[chelly-2001] candidate doi=10.1054/arth.2001.23622 year=2001 titleSim=1.000 journalOk=true title="Continuous femoral blocks improve recovery and outcome of patients undergoing total knee arthroplasty" journal=["The Journal of Arthroplasty"]
+[chelly-2001] ACCEPTED DOI 10.1054/arth.2001.23622
+
+[neuman-2022] Crossref https://api.crossref.org/works?query.bibliographic=Pain%2C%20analgesic%20use%2C%20and%20patient%20satisfaction%20with%20spinal%20versus%20general%20anesthesia%20for%20hip%20fracture%20surgery%3A%20a%20randomized%20clinical%20trial&rows=3
+[neuman-2022] Crossref returned 3 item(s)
+[neuman-2022] candidate doi=10.7326/p22-0012 year=2022 titleSim=0.634 journalOk=true title="Summary for Patients: Pain, Analgesic Use, and Patient Satisfaction With Spinal Versus General Anesthesia for Hip Fracture Surgery" journal=["Annals of Internal Medicine"]
+[neuman-2022] candidate doi=10.7326/l22-0365 year=2023 titleSim=0.791 journalOk=true title="Pain, Analgesic Use, and Patient Satisfaction With Spinal Versus General Anesthesia for Hip Fracture Surgery" journal=["Annals of Internal Medicine"]
+[neuman-2022] candidate doi=10.7326/l22-0366 year=2023 titleSim=0.791 journalOk=true title="Pain, Analgesic Use, and Patient Satisfaction With Spinal Versus General Anesthesia for Hip Fracture Surgery" journal=["Annals of Internal Medicine"]
+[neuman-2022] no Crossref match; trying PubMed
+[neuman-2022] PubMed search https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmax=5&term=Pain%2C%20analgesic%20use%2C%20and%20patient%20satisfaction%20with%20spinal%20versus%20general%20anesthesia%20for%20hip%20fracture%20surgery%3A%20a%20randomized%20clinical%20trial%5BTitle%5D
+[neuman-2022] PubMed ids: 35696684
+[neuman-2022] PMID 35696684 year=2022 titleSim=1.000 journalOk=true title="Pain, Analgesic Use, and Patient Satisfaction With Spinal Versus General Anesthesia for Hip Fracture Surgery : A Randomized Clinical Trial." journal="Annals of internal medicine"
+[neuman-2022] ACCEPTED PMID 35696684
+
+[liu-2015] Crossref https://api.crossref.org/works?query.bibliographic=Impact%20of%20peripheral%20nerve%20block%20with%20low%20dose%20local%20anesthetics%20on%20analgesia%20and%20functional%20outcomes%20following%20total%20knee%20arthroplasty%3A%20a%20retrospective%20study&rows=3
+[liu-2015] Crossref returned 3 item(s)
+[liu-2015] candidate doi=10.1111/pme.12652 year=2015 titleSim=1.000 journalOk=true title="Impact of Peripheral Nerve Block with Low Dose Local Anesthetics on Analgesia and Functional Outcomes Following Total Knee Arthroplasty: A Retrospective Study" journal=["Pain Medicine"]
+[liu-2015] ACCEPTED DOI 10.1111/pme.12652

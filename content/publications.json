@@ -1,0 +1,90 @@
+[
+  {
+    "id": "wardhan-2017",
+    "featured": true,
+    "title": "Recent advances in acute pain management: understanding the mechanisms of acute pain, the prescription of opioids, and the role of multimodal pain therapy",
+    "authors": "Wardhan R, Chelly JE",
+    "journal": "F1000Research",
+    "year": 2017,
+    "doi": "10.12688/f1000research.12286.1",
+    "pubmed": null,
+    "theme": "Why pain"
+  },
+  {
+    "id": "belfer-2014",
+    "featured": true,
+    "title": "The design and methods of genetic studies on acute and chronic postoperative pain in patients after total knee replacement",
+    "authors": "Belfer I, Greco CM, Lokshin A, Vulakovich K, Landsittel D, Dai F, et al. (incl. Chelly JE)",
+    "journal": "Pain Medicine",
+    "year": 2014,
+    "doi": "10.1111/pme.12487",
+    "pubmed": null,
+    "theme": "Predicting pain"
+  },
+  {
+    "id": "dai-2013",
+    "featured": true,
+    "title": "Integration of pain score and morphine consumption in analgesic clinical studies",
+    "authors": "Dai F, Silverman DG, Chelly JE, Li J, Belfer I, Qin L",
+    "journal": "The Journal of Pain",
+    "year": 2013,
+    "doi": "10.1016/j.jpain.2013.04.004",
+    "pubmed": null,
+    "theme": "Measuring outcomes"
+  },
+  {
+    "id": "jouguelet-lacoste-2015",
+    "featured": true,
+    "title": "The use of intravenous infusion or single dose of low-dose ketamine for postoperative analgesia: a review of the current literature",
+    "authors": "Jouguelet-Lacoste J, La Colla L, Schilling D, Chelly JE",
+    "journal": "Pain Medicine",
+    "year": 2015,
+    "doi": "10.1111/pme.12619",
+    "pubmed": null,
+    "theme": "Opioid-sparing care"
+  },
+  {
+    "id": "jacobs-2021",
+    "featured": true,
+    "title": "Large reduction in opioid prescribing by a multipronged behavioral intervention after major urologic surgery",
+    "authors": "Jacobs BL, Rogers D, Yabes JG, Bandari J, Ayyash OM, Maganty A, et al. (incl. Chelly JE)",
+    "journal": "Cancer",
+    "year": 2021,
+    "doi": "10.1002/cncr.33200",
+    "pubmed": null,
+    "theme": "Opioid-sparing care"
+  },
+  {
+    "id": "chelly-2001",
+    "featured": true,
+    "title": "Continuous femoral blocks improve recovery and outcome of patients undergoing total knee arthroplasty",
+    "authors": "Chelly JE, Greger J, Gebhard R, Coupe K, Clyburn TA, Buckle R, et al.",
+    "journal": "The Journal of Arthroplasty",
+    "year": 2001,
+    "doi": "10.1054/arth.2001.23622",
+    "pubmed": null,
+    "theme": "Earlier intervention"
+  },
+  {
+    "id": "neuman-2022",
+    "featured": false,
+    "title": "Pain, analgesic use, and patient satisfaction with spinal versus general anesthesia for hip fracture surgery: a randomized clinical trial",
+    "authors": "Neuman MD, Feng R, Ellenberg SS, Sieber F, Sessler DI, Magaziner J, et al. (REGAIN Investigators, incl. Chelly JE)",
+    "journal": "Annals of Internal Medicine",
+    "year": 2022,
+    "doi": null,
+    "pubmed": "35696684",
+    "theme": "Measuring outcomes"
+  },
+  {
+    "id": "liu-2015",
+    "featured": false,
+    "title": "Impact of peripheral nerve block with low dose local anesthetics on analgesia and functional outcomes following total knee arthroplasty: a retrospective study",
+    "authors": "Liu Q, Chelly JE, Williams JP, Gold MS",
+    "journal": "Pain Medicine",
+    "year": 2015,
+    "doi": "10.1111/pme.12652",
+    "pubmed": null,
+    "theme": "Measuring outcomes"
+  }
+]
