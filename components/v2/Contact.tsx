@@ -50,13 +50,13 @@ export function Contact() {
       <div className="v2-wrap v2-12">
         <div className="v2-contact-copy">
           <h2 id="contact-heading" className="v2-display">
-            Start a conversation about your perioperative program
+            Start a conversation about discharge prescribing
           </h2>
           <p className="v2-lede" style={{ marginTop: "1.25rem" }}>
-            CMIOs, anesthesiology and peri-operative chiefs, health-system
-            innovation teams, clinical research partners, and seed investors
-            should write. We will say plainly where the models are in
-            validation and what a collaboration would take.
+            Surgeons, CMIOs, anesthesiology and peri-operative chiefs,
+            health-system innovation teams, clinical research partners, and
+            seed investors should write. We will say plainly where the models
+            are in validation and what a collaboration would take.
           </p>
           <p className="v2-meta" style={{ marginTop: "1.5rem" }}>
             <a href={`mailto:${SITE.email}`}>{SITE.email}</a>

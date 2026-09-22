@@ -2,9 +2,7 @@
 
 import { motion, useReducedMotion } from "motion/react";
 import { BASE_PATH } from "./constants";
-import { PredictionChart } from "./PredictionChart";
 
-const WORDS = ["Pain,", "predicted", "before", "it", "starts."];
 const EASE: [number, number, number, number] = [0.2, 0.8, 0.2, 1];
 
 export function Hero() {
@@ -22,29 +20,30 @@ export function Hero() {
   return (
     <section className="v2-hero" aria-labelledby="hero-heading">
       <div className="v2-hero-grid" aria-hidden="true" />
-      <div className="v2-wrap v2-12">
+      <div className="v2-wrap">
         <div className="v2-hero-copy">
+          <motion.p className="v2-kicker" {...follow(0)}>
+            Mission statement
+          </motion.p>
           <h1 id="hero-heading" className="v2-display">
-            {WORDS.map((word, i) => (
-              <span key={word} className="v2-word">
-                <motion.span
-                  initial={reduce ? false : { y: 12, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{
-                    delay: reduce ? 0 : i * 0.05,
-                    duration: reduce ? 0 : 0.45,
-                    ease: EASE,
-                  }}
-                >
-                  {word}
-                </motion.span>
-              </span>
-            ))}
+            <motion.span
+              initial={reduce ? false : { y: 12, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                delay: reduce ? 0 : 0.08,
+                duration: reduce ? 0 : 0.5,
+                ease: EASE,
+              }}
+            >
+              Individualized opioid prescribing starts with understanding each
+              patient.
+            </motion.span>
           </h1>
-          <motion.p className="v2-lede" style={{ marginTop: "1.5rem" }} {...follow(0.28)}>
-            OpAIx builds clinically grounded models that forecast a patient&apos;s
-            pain trajectory, giving anesthesiology and perioperative teams time
-            to intervene earlier, and reasons to prescribe less.
+          <motion.p className="v2-lede v2-hero-mission" {...follow(0.28)}>
+            The mission of OpAIx is to support surgeons in reducing or
+            eliminating excess opioid prescribing at hospital discharge through
+            innovative models that estimate each patient&apos;s individual
+            needs.
           </motion.p>
           <motion.div className="v2-hero-actions" {...follow(0.4)}>
             <a className="v2-btn" href={`${BASE_PATH}#contact`}>
@@ -57,9 +56,6 @@ export function Hero() {
           <motion.p className="v2-founded" {...follow(0.5)}>
             Founded in Pittsburgh by UPMC physicians and AI researchers.
           </motion.p>
-        </div>
-        <div className="v2-hero-chart">
-          <PredictionChart />
         </div>
       </div>
     </section>

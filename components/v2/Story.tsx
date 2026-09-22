@@ -1,45 +1,87 @@
+import publications from "@/content/publications.json";
+import { Figure } from "./Figure";
+import { publicationHref, type Publication } from "./pubs";
+
+const papers = publications as Publication[];
+const relatedIds = ["wardhan-2017", "jacobs-2021", "chelly-2001"] as const;
+
 export function Story() {
+  const related = relatedIds
+    .map((id) => papers.find((p) => p.id === id))
+    .filter((p): p is Publication => Boolean(p))
+    .map((pub) => {
+      const href = publicationHref(pub);
+      return href ? { pub, href } : null;
+    })
+    .filter((item): item is { pub: Publication; href: string } => Boolean(item));
+
   return (
     <section id="about" className="v2-section" aria-labelledby="story-heading">
       <div className="v2-wrap v2-12">
         <div className="v2-story-copy">
           <h2 id="story-heading" className="v2-display">
-            Why pain, why Pittsburgh
+            Why pain. Why Pittsburgh.
           </h2>
-          <p className="v2-pull" style={{ marginTop: "1.5rem" }}>
-            Pain that can be seen coming is pain that can be treated with less
-            opioid.
+          <p className="v2-pull" style={{ marginTop: "1.5rem", maxWidth: "18ch" }}>
+            Pain matters. Individual needs go further.
           </p>
           <div className="v2-prose" style={{ marginTop: "1.5rem" }}>
             <p>
-              Years of peri-operative care made a practical problem obvious:
-              pain is still managed after it is already severe, and opioids
-              remain the default once that happens. OpAIx was founded in 2025
-              to put a forecast in front of that moment, so anesthesiology
-              and peri-operative teams can change the plan while there is
-              still time, and have a reason to use less opioid.
+              Severe postoperative pain can interfere with recovery, including
+              a patient&apos;s ability to regain function. Reducing pain is
+              important, but pain alone does not determine how many opioid
+              pills a patient may need after leaving the hospital.
             </p>
             <p>
-              The work sits in Pittsburgh because that is where the clinical
-              research already was. Dr. Jacques Chelly has run peri-operative
-              studies at the University of Pittsburgh since 2002, inside the
-              Department of Anesthesiology and Perioperative Medicine’s
-              clinical research program. The company was started by physicians
-              and AI researchers from UPMC to turn that research setting into
-              a model that can be checked against real cases.
+              OpAIx was founded to help surgeons make more individualized
+              prescribing decisions by considering expected pain alongside the
+              other factors that shape opioid needs. Our goal is to support
+              recovery while minimizing unused pills after discharge.
             </p>
             <p>
-              The models are in clinical validation with academic partners.
+              Developed in Pittsburgh, OpAIx draws on the research experience
+              of Co-Founder and CMO Dr. Jacques Chelly. He brings more than 30
+              years of clinical research experience, including work at the
+              University of Pittsburgh since 2002, exploring postoperative
+              opioid needs and alternatives to opioids in acute perioperative
+              care.
             </p>
           </div>
+          {related.length ? (
+            <div className="v2-related">
+              <h3 className="v2-related-heading">Related research</h3>
+              <ul>
+                {related.map(({ pub, href }) => (
+                  <li key={pub.id}>
+                    <a
+                      className="v2-underline"
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {pub.title}
+                      <span className="sr-only"> (opens in a new tab)</span>
+                    </a>
+                    <span className="v2-pub-meta v2-nums">
+                      {" "}
+                      <em>{pub.journal}</em>, {pub.year}.
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
         </div>
-        <aside className="v2-affiliations" aria-labelledby="affiliations-heading">
-          <h3 id="affiliations-heading">Affiliations</h3>
-          <ul>
-            <li>University of Pittsburgh</li>
-            <li>UPMC</li>
-          </ul>
-        </aside>
+        <div className="v2-story-visual">
+          <Figure
+            src="/home/visuals/pacu-bay.jpg"
+            alt="Empty recovery bay at dusk, unused bed and a dark monitor, brick buildings outside the window."
+            caption="A postoperative recovery bay."
+            width={1350}
+            height={1800}
+            sizes="(min-width: 1024px) 28vw, calc(100vw - 80px)"
+          />
+        </div>
       </div>
     </section>
   );

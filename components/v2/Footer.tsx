@@ -12,8 +12,8 @@ export function Footer() {
               {SITE.name}
             </div>
             <p className="v2-meta" style={{ marginTop: "0.85rem", maxWidth: "36ch" }}>
-              Models that forecast peri-operative pain so anesthesiology teams
-              can intervene earlier. {SITE.city}.
+              Models that help surgeons individualize opioid prescriptions at
+              hospital discharge. {SITE.city}.
             </p>
           </div>
           <div>

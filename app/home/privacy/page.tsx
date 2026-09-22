@@ -22,8 +22,9 @@ export default function PrivacyPage() {
         <h2>Who we are</h2>
         <p>
           OpAIx is a Pennsylvania company based in {SITE.city}. This site is
-          a public description of our peri-operative pain-forecast work, not a
-          patient portal and not a place to submit clinical records.
+          a public description of our work on individualized opioid prescribing
+          at hospital discharge, not a patient portal and not a place to submit
+          clinical records.
         </p>
 
         <h2>What we collect from this site</h2>

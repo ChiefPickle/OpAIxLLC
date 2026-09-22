@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "OpAIx: Predicting pain before it starts";
+export const alt = "OpAIx: Individualized opioid prescribing";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -50,24 +50,26 @@ export default function OpenGraphImage() {
         >
           <div
             style={{
-              fontSize: 64,
-              lineHeight: 1.05,
+              fontSize: 52,
+              lineHeight: 1.08,
               color: "#10233B",
               fontFamily: "Georgia, serif",
               letterSpacing: "-0.02em",
-              maxWidth: 900,
+              maxWidth: 980,
             }}
           >
-            Pain, predicted before it starts.
+            Individualized opioid prescribing starts with understanding each
+            patient.
           </div>
           <div
             style={{
-              fontSize: 28,
+              fontSize: 26,
               color: "#47546A",
               maxWidth: 760,
             }}
           >
-            Peri-operative pain forecasts for anesthesiology teams. Pittsburgh.
+            Helping surgeons estimate opioid needs at hospital discharge.
+            Pittsburgh.
           </div>
         </div>
       </div>

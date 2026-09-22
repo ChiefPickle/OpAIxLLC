@@ -21,15 +21,15 @@ export default function TermsPage() {
 
         <h2>What this site is</h2>
         <p>
-          The site describes {SITE.legalName} and its peri-operative pain
-          models. It is information for clinicians, researchers, and investors.
-          It is not medical advice, not a device manual, and not an offer of
-          care.
+          The site describes {SITE.legalName} and its work on individualized
+          opioid prescribing at hospital discharge. It is information for
+          clinicians, researchers, and investors. It is not medical advice, not
+          a device manual, and not an offer of care.
         </p>
 
         <h2>No clinical use from these pages</h2>
         <p>
-          Charts and examples on this site are schematic. They are not a
+          Figures and examples on this site are illustrative. They are not a
           patient record and must not be used to make treatment decisions.
           Any deployed model, if and when one is used in care, would sit
           inside a health system’s own clinical and regulatory process.

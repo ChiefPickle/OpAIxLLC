@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import publications from "@/content/publications.json";
+import { Figure } from "./Figure";
 import { highlightChelly, publicationHref, type Publication } from "./pubs";
 
 const papers = publications as Publication[];
@@ -60,10 +61,18 @@ export function Research() {
               Research
             </h2>
             <p style={{ marginTop: "1.25rem", maxWidth: "60ch" }}>
-              OpAIx is built on four decades of clinical research in
-              perioperative pain led by our co-founder Dr. Jacques Chelly. A
-              selection of the work that informs our models:
+              OpAIx is built on clinical research in perioperative pain led by
+              our co-founder Dr. Jacques Chelly. A selection of the work that
+              informs our models:
             </p>
+            <Figure
+              src="/home/visuals/atlas-record.jpg"
+              alt="Bound medical books beside a pencil sketch of a falling ink line that continues as a dashed teal forecast."
+              caption="The record the work rests on."
+              width={1800}
+              height={1350}
+              sizes="(min-width: 1024px) 28vw, calc(100vw - 80px)"
+            />
           </div>
         </div>
         <div className="v2-research-list">
