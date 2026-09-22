@@ -196,7 +196,7 @@ export function PredictionChart() {
             fontSize="15"
             fontFamily="Inter Variable, Inter, sans-serif"
           >
-            Pain 0–10
+            Pain 0-10
           </text>
 
           <motion.path

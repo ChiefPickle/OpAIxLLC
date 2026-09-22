@@ -15,7 +15,7 @@ export function Story() {
               Years of peri-operative care made a practical problem obvious:
               pain is still managed after it is already severe, and opioids
               remain the default once that happens. OpAIx was founded in 2025
-              to put a forecast in front of that moment — so anesthesiology
+              to put a forecast in front of that moment, so anesthesiology
               and peri-operative teams can change the plan while there is
               still time, and have a reason to use less opioid.
             </p>

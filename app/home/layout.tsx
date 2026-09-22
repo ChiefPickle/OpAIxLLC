@@ -7,7 +7,7 @@ import { Nav } from "@/components/v2/Nav";
 import { SmoothScroll } from "@/components/v2/SmoothScroll";
 import { SITE } from "@/components/v2/constants";
 
-const title = "OpAIx — Predicting pain before it starts";
+const title = "OpAIx: Predicting pain before it starts";
 const description =
   "OpAIx builds models that forecast a patient’s pain trajectory so anesthesiology and perioperative teams can intervene earlier and reduce opioid exposure. Pittsburgh, founded 2025.";
 
@@ -21,7 +21,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: {
     default: title,
-    template: "%s — OpAIx",
+    template: "%s | OpAIx",
   },
   description,
   applicationName: "OpAIx",

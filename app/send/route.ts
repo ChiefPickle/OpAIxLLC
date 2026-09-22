@@ -7,9 +7,8 @@ import {
 
 type Body = {
   name?: unknown;
-  organisation?: unknown;
-  role?: unknown;
   email?: unknown;
+  subject?: unknown;
   message?: unknown;
   company_website?: unknown;
 };
@@ -31,22 +30,18 @@ export async function POST(request: Request) {
   }
 
   const name = asString(body.name);
-  const organisation = asString(body.organisation);
-  const role = asString(body.role);
   const email = asString(body.email);
+  const subject = asString(body.subject);
   const message = asString(body.message);
 
   if (name.length < 2 || name.length > 80) {
     return invalid("Enter your name.");
   }
-  if (organisation.length < 2 || organisation.length > 120) {
-    return invalid("Enter your organisation.");
-  }
-  if (role.length < 2 || role.length > 80) {
-    return invalid("Enter your role.");
-  }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 120) {
     return invalid("Enter a valid email address.");
+  }
+  if (subject.length < 2 || subject.length > 120) {
+    return invalid("Enter a subject.");
   }
   if (message.length < 10 || message.length > 2000) {
     return invalid("Enter a message of at least 10 characters.");
@@ -55,16 +50,15 @@ export async function POST(request: Request) {
   const result = await deliverContactMail({
     name,
     email,
-    subject: `Site inquiry from ${name} (${organisation})`,
+    subject: `OpAIx contact: ${subject}`,
     text: [
       `Name: ${name}`,
-      `Organisation: ${organisation}`,
-      `Role: ${role}`,
       `Email: ${email}`,
+      `Subject: ${subject}`,
       "",
       message,
     ].join("\n"),
-    formspreeBody: { name, organisation, role, email, message },
+    formspreeBody: { name, email, subject, message },
   });
 
   if (!result.ok) {

@@ -1,4 +1,4 @@
-/* Scoped to .opaix-v2 — do not import from the live root layout. */
+/* Scoped to .opaix-v2. Do not import from the live root layout. */
 
 @font-face {
   font-family: "Newsreader Variable";
@@ -205,11 +205,17 @@
   font-weight: 500;
   cursor: pointer;
   touch-action: manipulation;
-  transition: background-color 150ms var(--ease-out);
+  transition:
+    background-color 150ms var(--ease-out),
+    transform 160ms var(--ease-out);
 }
 
 .opaix-v2 .v2-btn:hover {
   background: var(--color-ink-hover);
+}
+
+.opaix-v2 .v2-btn:active {
+  transform: scale(0.97);
 }
 
 .opaix-v2 .v2-btn:disabled {
@@ -1111,6 +1117,10 @@
   .opaix-v2 .v2-sheet-backdrop,
   .opaix-v2 .v2-sheet-panel {
     transition: none;
+  }
+
+  .opaix-v2 .v2-btn:active {
+    transform: none;
   }
 
   .opaix-v2 .v2-more {

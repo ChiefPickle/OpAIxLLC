@@ -55,6 +55,13 @@
     outline: 2px solid #22d3ee;
     outline-offset: 3px;
   }
+
+  #contact input:-webkit-autofill,
+  #contact textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #1e293b inset;
+    -webkit-text-fill-color: #fff;
+    caret-color: #fff;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

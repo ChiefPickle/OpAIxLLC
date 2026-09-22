@@ -34,7 +34,7 @@ export function Team() {
             Leadership Team
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Meet the visionaries behind OpAIx — a team of physicians,
+            Meet the visionaries behind OpAIx, a team of physicians,
             researchers, and entrepreneurs united by a passion for transforming
             healthcare.
           </p>

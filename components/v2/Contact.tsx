@@ -69,7 +69,7 @@ export function Contact() {
         <div className="v2-contact-form">
           {status === "sent" ? (
             <p className="v2-form-success" role="status">
-              Message sent — we&apos;ll reply within two business days.
+              Message sent. We&apos;ll reply within two business days.
             </p>
           ) : (
             <form className="v2-form" onSubmit={onSubmit} noValidate>
