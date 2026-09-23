@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "motion/react";
 import { BASE_PATH } from "./constants";
+import { NeedField } from "./NeedField";
 
 const EASE: [number, number, number, number] = [0.2, 0.8, 0.2, 1];
 
@@ -20,7 +21,7 @@ export function Hero() {
   return (
     <section className="v2-hero" aria-labelledby="hero-heading">
       <div className="v2-hero-grid" aria-hidden="true" />
-      <div className="v2-wrap">
+      <div className="v2-wrap v2-12">
         <div className="v2-hero-copy">
           <motion.p className="v2-kicker" {...follow(0)}>
             Mission statement
@@ -53,10 +54,22 @@ export function Hero() {
               Read the research
             </a>
           </motion.div>
-          <motion.p className="v2-founded" {...follow(0.5)}>
-            Founded in Pittsburgh by UPMC physicians and AI researchers.
-          </motion.p>
         </div>
+        <motion.div
+          className="v2-hero-viz"
+          initial={reduce ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            delay: reduce ? 0 : 0.2,
+            duration: reduce ? 0 : 0.45,
+            ease: EASE,
+          }}
+        >
+          <NeedField />
+        </motion.div>
+        <motion.p className="v2-founded v2-hero-credit" {...follow(0.55)}>
+          Founded in Pittsburgh by UPMC physicians and AI researchers.
+        </motion.p>
       </div>
     </section>
   );
