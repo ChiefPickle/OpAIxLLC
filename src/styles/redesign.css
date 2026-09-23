@@ -1005,10 +1005,88 @@
   color: var(--color-paper);
 }
 
-.opaix-v2 .v2-form-success {
-  font-size: 1.125rem;
+.opaix-v2 .v2-contact-stage {
+  display: grid;
+  min-height: 26.5rem;
+}
+
+.opaix-v2 .v2-contact-stage > * {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.opaix-v2 .v2-contact-stage > .v2-form {
+  align-self: start;
+  width: 100%;
+}
+
+.opaix-v2 .v2-contact-stage > .v2-receipt {
+  align-self: center;
+  width: 100%;
+}
+
+.opaix-v2 .v2-contact:has(.v2-receipt) .v2-12 {
+  align-items: center;
+}
+
+.opaix-v2 .v2-receipt {
+  display: grid;
+  gap: 1.35rem;
+  align-items: center;
+}
+
+.opaix-v2 .v2-receipt-fig {
+  margin: 0;
+  max-width: 14rem;
+}
+
+.opaix-v2 .v2-receipt-fig svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.opaix-v2 .v2-contact .v2-receipt-kicker {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6ec8c9;
+  margin: 0 0 0.85rem;
+}
+
+.opaix-v2 .v2-receipt-title {
+  font-family: "Newsreader Variable", Newsreader, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: clamp(2rem, 6.4vw, 2.375rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
   color: var(--color-paper);
-  max-width: 36ch;
+  max-width: 11em;
+}
+
+.opaix-v2 .v2-receipt-title:focus {
+  outline: none;
+}
+
+.opaix-v2 .v2-receipt-title:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 4px;
+}
+
+.opaix-v2 .v2-contact .v2-receipt-body {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.55;
+  color: #c5ccd6;
+  max-width: 31rem;
+}
+
+.opaix-v2 .v2-contact .v2-receipt-note {
+  margin-top: 1.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #9aa6b4;
 }
 
 .opaix-v2 .v2-btn-paper {
@@ -1184,6 +1262,27 @@
     padding-block: 80px;
   }
 
+  .opaix-v2 .v2-receipt {
+    grid-template-columns: minmax(8rem, 38%) minmax(0, 1fr);
+    gap: 1.5rem 1.75rem;
+  }
+
+  .opaix-v2 .v2-receipt-fig {
+    max-width: 16rem;
+  }
+
+  .opaix-v2 .v2-contact-stage {
+    min-height: 28rem;
+  }
+
+  .opaix-v2 .v2-receipt-title {
+    font-size: 2.375rem;
+  }
+
+  .opaix-v2 .v2-contact .v2-receipt-body {
+    font-size: 1.1875rem;
+  }
+
   .opaix-v2 .v2-strip {
     padding-block: 56px;
   }
@@ -1285,6 +1384,14 @@
     grid-column: 7 / 13;
   }
 
+  .opaix-v2 .v2-receipt-fig {
+    max-width: none;
+  }
+
+  .opaix-v2 .v2-receipt-title {
+    font-size: 2.5rem;
+  }
+
   .opaix-v2 .v2-form .v2-btn {
     align-self: flex-start;
     width: auto;
@@ -1347,7 +1454,12 @@
 
 @media (max-width: 767px) {
   .opaix-v2 .v2-need-quiet,
-  .opaix-v2 .v2-need-in {
+  .opaix-v2 .v2-need-in,
+  .opaix-v2 .v2-receipt-quiet {
     display: none;
+  }
+
+  .opaix-v2 .v2-receipt-title {
+    font-size: 1.875rem;
   }
 }

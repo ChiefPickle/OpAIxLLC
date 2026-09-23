@@ -1,13 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { ConfirmField } from "./ConfirmField";
 import { routes, SITE } from "./constants";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
+const EASE: [number, number, number, number] = [0.2, 0.8, 0.2, 1];
+
 export function Contact() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
+  const reduce = useReducedMotion();
+  const titleRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    if (status === "sent") {
+      titleRef.current?.focus();
+    }
+  }, [status]);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -67,66 +79,103 @@ export function Contact() {
           </p>
         </div>
         <div className="v2-contact-form">
-          {status === "sent" ? (
-            <p className="v2-form-success" role="status">
-              Message sent. We&apos;ll reply within two business days.
-            </p>
-          ) : (
-            <form className="v2-form" onSubmit={onSubmit} noValidate>
-              <div className="v2-field-group">
-                <label htmlFor="v2-name">Name</label>
-                <input id="v2-name" name="name" className="v2-field" required autoComplete="name" />
-              </div>
-              <div className="v2-field-group">
-                <label htmlFor="v2-org">Organisation</label>
-                <input
-                  id="v2-org"
-                  name="organisation"
-                  className="v2-field"
-                  required
-                  autoComplete="organization"
-                />
-              </div>
-              <div className="v2-field-group">
-                <label htmlFor="v2-role">Role</label>
-                <input id="v2-role" name="role" className="v2-field" required />
-              </div>
-              <div className="v2-field-group">
-                <label htmlFor="v2-email">Email</label>
-                <input
-                  id="v2-email"
-                  name="email"
-                  type="email"
-                  className="v2-field"
-                  required
-                  autoComplete="email"
-                />
-              </div>
-              <div className="v2-field-group">
-                <label htmlFor="v2-message">Message</label>
-                <textarea
-                  id="v2-message"
-                  name="message"
-                  className="v2-field"
-                  rows={5}
-                  required
-                  minLength={10}
-                />
-              </div>
-              <div className="v2-hp" aria-hidden="true">
-                <label htmlFor="v2-hp">Company website</label>
-                <input id="v2-hp" name="company_website" tabIndex={-1} autoComplete="off" />
-              </div>
-              {status === "error" && (
-                <p className="v2-form-error" role="alert">
-                  {error}
-                </p>
+          <div className="v2-contact-stage">
+            <AnimatePresence initial={false}>
+              {status === "sent" ? (
+                <motion.div
+                  key="receipt"
+                  className="v2-receipt"
+                  role="status"
+                  aria-live="polite"
+                  initial={reduce ? false : { opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: reduce ? 0 : 0.28, ease: EASE }}
+                >
+                  <ConfirmField />
+                  <div className="v2-receipt-copy">
+                    <p className="v2-receipt-kicker">Message received</p>
+                    <h3
+                      ref={titleRef}
+                      tabIndex={-1}
+                      className="v2-receipt-title"
+                    >
+                      Thank you for reaching&nbsp;out.
+                    </h3>
+                    <p className="v2-receipt-body">
+                      Your message has been sent to the OpAIx team. We&apos;ll
+                      review it and get back to you within two business days.
+                    </p>
+                    <p className="v2-receipt-note">
+                      We look forward to the conversation.
+                    </p>
+                  </div>
+                </motion.div>
+              ) : (
+                <motion.form
+                  key="form"
+                  className="v2-form"
+                  onSubmit={onSubmit}
+                  noValidate
+                  initial={false}
+                  exit={reduce ? undefined : { opacity: 0 }}
+                  transition={{ duration: reduce ? 0 : 0.18, ease: EASE }}
+                >
+                  <div className="v2-field-group">
+                    <label htmlFor="v2-name">Name</label>
+                    <input id="v2-name" name="name" className="v2-field" required autoComplete="name" />
+                  </div>
+                  <div className="v2-field-group">
+                    <label htmlFor="v2-org">Organisation</label>
+                    <input
+                      id="v2-org"
+                      name="organisation"
+                      className="v2-field"
+                      required
+                      autoComplete="organization"
+                    />
+                  </div>
+                  <div className="v2-field-group">
+                    <label htmlFor="v2-role">Role</label>
+                    <input id="v2-role" name="role" className="v2-field" required />
+                  </div>
+                  <div className="v2-field-group">
+                    <label htmlFor="v2-email">Email</label>
+                    <input
+                      id="v2-email"
+                      name="email"
+                      type="email"
+                      className="v2-field"
+                      required
+                      autoComplete="email"
+                    />
+                  </div>
+                  <div className="v2-field-group">
+                    <label htmlFor="v2-message">Message</label>
+                    <textarea
+                      id="v2-message"
+                      name="message"
+                      className="v2-field"
+                      rows={5}
+                      required
+                      minLength={10}
+                    />
+                  </div>
+                  <div className="v2-hp" aria-hidden="true">
+                    <label htmlFor="v2-hp">Company website</label>
+                    <input id="v2-hp" name="company_website" tabIndex={-1} autoComplete="off" />
+                  </div>
+                  {status === "error" && (
+                    <p className="v2-form-error" role="alert">
+                      {error}
+                    </p>
+                  )}
+                  <button className="v2-btn v2-btn-paper" type="submit" disabled={status === "sending"}>
+                    {status === "sending" ? "Sending" : "Send message"}
+                  </button>
+                </motion.form>
               )}
-              <button className="v2-btn v2-btn-paper" type="submit" disabled={status === "sending"}>
-                {status === "sending" ? "Sending" : "Send message"}
-              </button>
-            </form>
-          )}
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </section>
