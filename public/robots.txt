@@ -1,0 +1,96 @@
+# OpAIx crawler policy
+# The public site is /. HTML at /home is the retired homepage and is noindex.
+# Agents may still read both. The contact APIs are not for crawl.
+
+User-agent: *
+Allow: /
+Disallow: /agent-md
+Disallow: /send
+Disallow: /home/send
+Content-Signal: search=yes, ai-train=yes, ai-input=yes
+
+User-agent: GPTBot
+Allow: /
+Disallow: /agent-md
+Disallow: /send
+Disallow: /home/send
+Content-Signal: search=yes, ai-train=yes, ai-input=yes
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /agent-md
+Disallow: /send
+Disallow: /home/send
+Content-Signal: search=yes, ai-train=yes, ai-input=yes
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /agent-md
+Disallow: /send
+Disallow: /home/send
+Content-Signal: search=yes, ai-train=yes, ai-input=yes
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /agent-md
+Disallow: /send
+Disallow: /home/send
+Content-Signal: search=yes, ai-train=yes, ai-input=yes
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /agent-md
+Disallow: /send
+Disallow: /home/send
+Content-Signal: search=yes, ai-train=yes, ai-input=yes
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /agent-md
+Disallow: /send
+Disallow: /home/send
+Content-Signal: search=yes, ai-train=yes, ai-input=yes
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /agent-md
+Disallow: /send
+Disallow: /home/send
+Content-Signal: search=yes, ai-train=yes, ai-input=yes
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /agent-md
+Disallow: /send
+Disallow: /home/send
+Content-Signal: search=yes, ai-train=yes, ai-input=yes
+
+User-agent: Bytespider
+Allow: /
+Disallow: /agent-md
+Disallow: /send
+Disallow: /home/send
+Content-Signal: search=yes, ai-train=yes, ai-input=yes
+
+User-agent: CCBot
+Allow: /
+Disallow: /agent-md
+Disallow: /send
+Disallow: /home/send
+Content-Signal: search=yes, ai-train=yes, ai-input=yes
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /agent-md
+Disallow: /send
+Disallow: /home/send
+Content-Signal: search=yes, ai-train=yes, ai-input=yes
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /agent-md
+Disallow: /send
+Disallow: /home/send
+Content-Signal: search=yes, ai-train=yes, ai-input=yes
+
+Sitemap: https://www.opaixllc.com/sitemap.xml

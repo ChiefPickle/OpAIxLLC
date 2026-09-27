@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Terms",
   description: `Terms of use for the ${SITE.legalName} website.`,
   robots: { index: false, follow: false },
-  alternates: { canonical: `${SITE.url}/home/terms` },
+  alternates: { canonical: `${SITE.url}/terms` },
 };
 
 export default function TermsPage() {
@@ -14,9 +14,8 @@ export default function TermsPage() {
       <div className="v2-wrap v2-prose">
         <h1 className="v2-display">Terms</h1>
         <p>
-          These terms cover use of the public website at opaixllc.com, including
-          the review copy at /home. They are a draft, not counsel-approved.
-          Pennsylvania law is assumed; confirm before promotion.
+          These terms cover use of the public website at opaixllc.com. They are
+          a draft, not counsel-approved. Pennsylvania law is assumed.
         </p>
 
         <h2>What this site is</h2>

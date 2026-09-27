@@ -1,4 +1,4 @@
-export const BASE_PATH = "/home";
+export const BASE_PATH = "/";
 
 export const SITE = {
   name: "OpAIx",
@@ -20,7 +20,7 @@ export const navItems = [
 
 export const routes = {
   home: BASE_PATH,
-  privacy: `${BASE_PATH}/privacy`,
-  terms: `${BASE_PATH}/terms`,
-  send: `${BASE_PATH}/send`,
+  privacy: "/privacy",
+  terms: "/terms",
+  send: "/send",
 } as const;

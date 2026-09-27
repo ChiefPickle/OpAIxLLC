@@ -1,27 +1,23 @@
-import { Approach } from "@/components/v2/Approach";
-import { Background } from "@/components/v2/Background";
-import { Contact } from "@/components/v2/Contact";
-import { Evidence } from "@/components/v2/Evidence";
-import { PlaceBand } from "@/components/v2/Figure";
-import { Hero } from "@/components/v2/Hero";
-import { Research } from "@/components/v2/Research";
-import { Security } from "@/components/v2/Security";
-import { Story } from "@/components/v2/Story";
-import { Team } from "@/components/v2/Team";
+import { About } from "@/components/About";
+import { CTA } from "@/components/CTA";
+import { Footer } from "@/components/Footer";
+import { Hero } from "@/components/Hero";
+import { Navbar } from "@/components/Navbar";
+import { Solutions } from "@/components/Solutions";
+import { Team } from "@/components/Team";
 
-export default function HomeV2Page() {
+export default function ArchiveHomePage() {
   return (
-    <main id="content">
-      <Hero />
-      <Background />
-      <Approach />
-      <Evidence />
-      <PlaceBand />
-      <Story />
-      <Research />
-      <Team />
-      <Security />
-      <Contact />
-    </main>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <Solutions />
+        <About />
+        <Team />
+        <CTA />
+      </main>
+      <Footer />
+    </>
   );
 }

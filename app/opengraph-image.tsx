@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "OpAIx - AI-Powered Healthcare Solutions";
+export const alt = "OpAIx: Individualized opioid prescribing";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -13,75 +13,63 @@ export default function OpenGraphImage() {
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "#0F172A",
+          justifyContent: "space-between",
+          background: "#F8F8F5",
+          padding: "72px 80px",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 28,
-          }}
-        >
-          <svg
-            width="88"
-            height="88"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <path
-              d="M22 12h-4l-3 9L9 3l-3 9H2"
-              stroke="#22D3EE"
-              strokeWidth="2.25"
+        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+          <svg width="72" height="32" viewBox="0 0 36 16">
+            <polyline
+              points="1,13 8,12 14,9 18,8 25,4 34,3"
+              fill="none"
+              stroke="#10233B"
+              strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
+            <circle cx="34" cy="3" r="2" fill="#0E8A8C" />
           </svg>
-          <div style={{ display: "flex", alignItems: "baseline" }}>
-            <div
-              style={{
-                color: "white",
-                fontSize: 72,
-                fontWeight: 700,
-                letterSpacing: "-0.03em",
-              }}
-            >
-              OpAI
-            </div>
-            <div
-              style={{
-                color: "#22D3EE",
-                fontSize: 72,
-                fontWeight: 700,
-                letterSpacing: "-0.03em",
-              }}
-            >
-              x
-            </div>
-            <div
-              style={{
-                color: "#94A3B8",
-                fontSize: 48,
-                fontWeight: 500,
-                marginLeft: 22,
-              }}
-            >
-              - AI-Powered
-            </div>
+          <div
+            style={{
+              fontSize: 32,
+              color: "#10233B",
+              fontFamily: "Georgia, serif",
+            }}
+          >
+            OpAIx
           </div>
         </div>
         <div
           style={{
-            marginTop: 28,
-            color: "#67E8F9",
-            fontSize: 36,
-            fontWeight: 500,
-            letterSpacing: "0.02em",
+            display: "flex",
+            flexDirection: "column",
+            gap: 24,
           }}
         >
-          Healthcare Solutions
+          <div
+            style={{
+              fontSize: 52,
+              lineHeight: 1.08,
+              color: "#10233B",
+              fontFamily: "Georgia, serif",
+              letterSpacing: "-0.02em",
+              maxWidth: 980,
+            }}
+          >
+            Individualized opioid prescribing starts with understanding each
+            patient.
+          </div>
+          <div
+            style={{
+              fontSize: 26,
+              color: "#47546A",
+              maxWidth: 760,
+            }}
+          >
+            Helping surgeons estimate opioid needs at hospital discharge.
+            Pittsburgh.
+          </div>
         </div>
       </div>
     ),

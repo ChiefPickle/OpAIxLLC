@@ -1,25 +1,25 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const title = "OpAIx - AI-Powered Healthcare Solutions";
+const title = "OpAIx: Individualized opioid prescribing";
 const description =
-  "AI-powered healthcare solutions that help physicians identify risks earlier and deliver more personalized, proactive patient care.";
+  "OpAIx supports surgeons in reducing excess opioid prescribing at hospital discharge through models that estimate each patient’s individual needs. Pittsburgh, founded 2025.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://opaixllc.vercel.app"),
+  metadataBase: new URL("https://www.opaixllc.com"),
   title,
   description,
   applicationName: "OpAIx",
   keywords: [
     "OpAIx",
-    "AI-powered healthcare solutions",
-    "predictive healthcare",
-    "medical AI",
+    "individualized opioid prescribing",
+    "hospital discharge",
+    "perioperative pain",
   ],
   openGraph: {
     title,
     description,
-    url: "https://opaixllc.vercel.app",
+    url: "https://www.opaixllc.com",
     siteName: "OpAIx",
     type: "website",
     locale: "en_US",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     description,
   },
   icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-    apple: "/apple-icon.png",
+    icon: [{ url: "/home/icons/icon.svg", type: "image/svg+xml" }],
+    apple: "/home/icons/apple-touch-icon.png",
   },
 };
 

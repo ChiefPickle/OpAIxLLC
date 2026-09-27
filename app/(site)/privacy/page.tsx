@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Privacy policy",
   description: `How ${SITE.legalName} handles information submitted through this site.`,
   robots: { index: false, follow: false },
-  alternates: { canonical: `${SITE.url}/home/privacy` },
+  alternates: { canonical: `${SITE.url}/privacy` },
 };
 
 export default function PrivacyPage() {

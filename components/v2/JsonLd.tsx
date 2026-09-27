@@ -8,7 +8,7 @@ export function JsonLd() {
   const organization = {
     "@type": "Organization",
     name: SITE.legalName,
-    url: `${SITE.url}/home`,
+    url: SITE.url,
     description:
       "OpAIx supports surgeons in reducing excess opioid prescribing at hospital discharge through models that estimate each patient’s individual needs.",
     email: SITE.email,
