@@ -609,7 +609,15 @@
   font-size: 0.9375rem;
   font-weight: 600;
   color: var(--color-ink);
+  margin: 0 0 0.35rem;
+}
+
+.opaix-v2 .v2-related-note {
   margin: 0 0 0.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--color-slate);
+  max-width: 48ch;
 }
 
 .opaix-v2 .v2-related ul {
@@ -788,6 +796,14 @@
 
 .opaix-v2 .v2-pub-meta em {
   font-style: italic;
+}
+
+.opaix-v2 .v2-pub-summary {
+  margin-top: 0.55rem;
+  max-width: 62ch;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--color-slate);
 }
 
 .opaix-v2 .v2-pub-theme {

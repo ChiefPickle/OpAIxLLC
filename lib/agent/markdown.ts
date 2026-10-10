@@ -1,4 +1,26 @@
+import publications from "@/content/publications.json";
 import { ORIGIN } from "@/lib/agent/site";
+import {
+  DR_JACQUES_CHELLY_PUBLICATION_PROFILE,
+  formatPublicationCitation,
+  type Publication,
+} from "@/lib/publications";
+
+const papers = publications as Publication[];
+
+function researchSectionMarkdown() {
+  const lines = papers.map((pub) => {
+    const cite = formatPublicationCitation(pub);
+    return `- ${cite}\n  ${pub.summary}`;
+  });
+  return `## Research
+
+Selected peer-reviewed work in perioperative pain that includes publications co-authored by co-founder Dr. Jacques Chelly. Titles link to the publisher record; brief summaries below are written for this site and are not taken from the articles. They describe clinical context only and do not validate OpAIx models.
+
+Full publication record (Google Scholar, Jacques E. Chelly): ${DR_JACQUES_CHELLY_PUBLICATION_PROFILE}
+
+${lines.join("\n\n")}`;
+}
 
 const HOME = `# Individualized opioid prescribing starts with understanding each patient.
 
@@ -54,20 +76,7 @@ Developed in Pittsburgh, OpAIx draws on the research experience of Co-Founder an
 
 Naming that setting does not imply a University of Pittsburgh or UPMC endorsement.
 
-## Research
-
-OpAIx is built on clinical research in perioperative pain led by co-founder Dr. Jacques Chelly. A selection of the work that informs the models:
-
-- Wardhan R, Chelly JE. Recent advances in acute pain management: understanding the mechanisms of acute pain, the prescription of opioids, and the role of multimodal pain therapy. F1000Research, 2017. https://doi.org/10.12688/f1000research.12286.1
-- Belfer I, Greco CM, Lokshin A, Vulakovich K, Landsittel D, Dai F, et al. (incl. Chelly JE). The design and methods of genetic studies on acute and chronic postoperative pain in patients after total knee replacement. Pain Medicine, 2014. https://doi.org/10.1111/pme.12487
-- Dai F, Silverman DG, Chelly JE, Li J, Belfer I, Qin L. Integration of pain score and morphine consumption in analgesic clinical studies. The Journal of Pain, 2013. https://doi.org/10.1016/j.jpain.2013.04.004
-- Jouguelet-Lacoste J, La Colla L, Schilling D, Chelly JE. The use of intravenous infusion or single dose of low-dose ketamine for postoperative analgesia: a review of the current literature. Pain Medicine, 2015. https://doi.org/10.1111/pme.12619
-- Jacobs BL, Rogers D, Yabes JG, Bandari J, Ayyash OM, Maganty A, et al. (incl. Chelly JE). Large reduction in opioid prescribing by a multipronged behavioral intervention after major urologic surgery. Cancer, 2021. https://doi.org/10.1002/cncr.33200
-- Chelly JE, Greger J, Gebhard R, Coupe K, Clyburn TA, Buckle R, et al. Continuous femoral blocks improve recovery and outcome of patients undergoing total knee arthroplasty. The Journal of Arthroplasty, 2001. https://doi.org/10.1054/arth.2001.23622
-- Neuman MD, Feng R, Ellenberg SS, Sieber F, Sessler DI, Magaziner J, et al. (REGAIN Investigators, incl. Chelly JE). Pain, analgesic use, and patient satisfaction with spinal versus general anesthesia for hip fracture surgery: a randomized clinical trial. Annals of Internal Medicine, 2022. PMID 35696684
-- Liu Q, Chelly JE, Williams JP, Gold MS. Impact of peripheral nerve block with low dose local anesthetics on analgesia and functional outcomes following total knee arthroplasty: a retrospective study. Pain Medicine, 2015. https://doi.org/10.1111/pme.12652
-
-Jacobs 2021 is related research, not an OpAIx outcome.
+${researchSectionMarkdown()}
 
 ## How we handle patient data
 

@@ -50,6 +50,9 @@ export function Story() {
           {related.length ? (
             <div className="v2-related">
               <h3 className="v2-related-heading">Related research</h3>
+              <p className="v2-related-note">
+                Bibliographic links only; not evidence of OpAIx product validation.
+              </p>
               <ul>
                 {related.map(({ pub, href }) => (
                   <li key={pub.id}>

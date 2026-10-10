@@ -8,7 +8,8 @@
     "year": 2017,
     "doi": "10.12688/f1000research.12286.1",
     "pubmed": null,
-    "theme": "Why pain"
+    "theme": "Why pain",
+    "summary": "Narrative review of acute pain biology, opioid prescribing considerations, and multimodal analgesia. Useful background on why discharge prescribing is often discussed alongside non-opioid strategies."
   },
   {
     "id": "belfer-2014",
@@ -19,7 +20,8 @@
     "year": 2014,
     "doi": "10.1111/pme.12487",
     "pubmed": null,
-    "theme": "Predicting pain"
+    "theme": "Predicting pain",
+    "summary": "Describes study design for genetic analyses of acute and persistent pain after knee replacement. Highlights patient-level variation beyond average pain scores in perioperative research."
   },
   {
     "id": "dai-2013",
@@ -30,7 +32,8 @@
     "year": 2013,
     "doi": "10.1016/j.jpain.2013.04.004",
     "pubmed": null,
-    "theme": "Measuring outcomes"
+    "theme": "Measuring outcomes",
+    "summary": "Discusses combining patient-reported pain with opioid consumption when judging analgesic effect in trials. Relevant to outcome measurement when pain alone does not capture medication use."
   },
   {
     "id": "jouguelet-lacoste-2015",
@@ -41,7 +44,8 @@
     "year": 2015,
     "doi": "10.1111/pme.12619",
     "pubmed": null,
-    "theme": "Opioid-sparing care"
+    "theme": "Opioid-sparing care",
+    "summary": "Review of perioperative low-dose ketamine regimens and reported analgesic effects. Context for opioid-sparing options in acute postoperative care."
   },
   {
     "id": "jacobs-2021",
@@ -52,7 +56,8 @@
     "year": 2021,
     "doi": "10.1002/cncr.33200",
     "pubmed": null,
-    "theme": "Opioid-sparing care"
+    "theme": "Opioid-sparing care",
+    "summary": "Reports lower post-discharge opioid prescribing after a structured behavioral intervention in urologic surgery. An independent research result, not an OpAIx product outcome."
   },
   {
     "id": "chelly-2001",
@@ -63,7 +68,8 @@
     "year": 2001,
     "doi": "10.1054/arth.2001.23622",
     "pubmed": null,
-    "theme": "Earlier intervention"
+    "theme": "Earlier intervention",
+    "summary": "Clinical study linking continuous femoral nerve blockade to recovery measures after total knee arthroplasty. Example of regional analgesia affecting function, not only pain scores."
   },
   {
     "id": "neuman-2022",
@@ -72,9 +78,10 @@
     "authors": "Neuman MD, Feng R, Ellenberg SS, Sieber F, Sessler DI, Magaziner J, et al. (REGAIN Investigators, incl. Chelly JE)",
     "journal": "Annals of Internal Medicine",
     "year": 2022,
-    "doi": null,
+    "doi": "10.7326/M22-0320",
     "pubmed": "35696684",
-    "theme": "Measuring outcomes"
+    "theme": "Measuring outcomes",
+    "summary": "Large randomized trial comparing anesthesia techniques for hip fracture surgery on pain, analgesic use, and satisfaction. Illustrates rigorous measurement of perioperative patient-reported outcomes."
   },
   {
     "id": "liu-2015",
@@ -85,6 +92,7 @@
     "year": 2015,
     "doi": "10.1111/pme.12652",
     "pubmed": null,
-    "theme": "Measuring outcomes"
+    "theme": "Measuring outcomes",
+    "summary": "Retrospective analysis of low-dose peripheral nerve blocks and postoperative analgesia and mobility after knee replacement. Adds real-world context on blocks and functional recovery."
   }
 ]

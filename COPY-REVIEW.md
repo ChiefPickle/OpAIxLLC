@@ -63,7 +63,7 @@ Curated list is the eight papers supplied by the client, in the given order. Six
 | neuman-2022 | PMID `35696684` | Crossref top hits were a 2022 patient summary and 2023 letters (title sim &lt; 0.9 or year 2023). PubMed title/year/journal match. **DOI needs manual confirmation** — `doi` left null. |
 | liu-2015 | `10.1111/pme.12652` | Crossref match (sim 1.000) |
 
-- [ ] **Google Scholar URL TODO.** “Full publication record” is `href="#"` until you send Dr. Chelly’s profile URL. Do not guess it.
+- [x] **Google Scholar URL.** “Full publication record” → `https://scholar.google.com/citations?user=8L-8DMQAAAAJ&hl=en` (Jacques E. Chelly, University of Pittsburgh). See `content/research-copyright-audit.md`.
 - [ ] Confirm the intro’s “four decades” against the 40+ evidence line.
 
 Title links use the visible title plus a screen-reader-only “ (opens in a new tab)” so the accessible name is `<title> (opens in a new tab)` without a conflicting `aria-label`. Approach “See:” links use the same pattern.

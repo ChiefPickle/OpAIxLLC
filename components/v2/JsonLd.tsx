@@ -35,7 +35,7 @@ export function JsonLd() {
           "@type": "Periodical",
           name: pub.journal,
         },
-        ...(sameAs && pub.doi ? { sameAs } : {}),
+        ...(sameAs ? { sameAs } : {}),
       };
     });
 

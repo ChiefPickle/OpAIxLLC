@@ -3,7 +3,12 @@
 import { useState } from "react";
 import publications from "@/content/publications.json";
 import { Figure } from "./Figure";
-import { highlightChelly, publicationHref, type Publication } from "./pubs";
+import {
+  DR_JACQUES_CHELLY_PUBLICATION_PROFILE,
+  highlightChelly,
+  publicationHref,
+  type Publication,
+} from "./pubs";
 
 const papers = publications as Publication[];
 const featured = papers.filter((p) => p.featured);
@@ -43,6 +48,9 @@ function PubRow({ pub, tabIndex }: { pub: Publication; tabIndex?: number }) {
         <p className="v2-pub-meta v2-nums">
           <Authors text={pub.authors} />, <em>{pub.journal}</em>, {pub.year}.
         </p>
+        {pub.summary ? (
+          <p className="v2-pub-summary">{pub.summary}</p>
+        ) : null}
       </div>
       <p className="v2-pub-theme">{pub.theme}</p>
     </li>
@@ -61,9 +69,11 @@ export function Research() {
               Research
             </h2>
             <p style={{ marginTop: "1.25rem", maxWidth: "60ch" }}>
-              OpAIx is built on clinical research in perioperative pain led by
-              our co-founder Dr. Jacques Chelly. A selection of the work that
-              informs our models:
+              Selected peer-reviewed work in perioperative pain that includes
+              publications co-authored by co-founder Dr. Jacques Chelly. Titles
+              link to the publisher record; brief summaries below are written
+              for this site and are not taken from the articles. They describe
+              clinical context only and do not validate OpAIx models.
             </p>
             <Figure
               src="/home/visuals/atlas-record.jpg"
@@ -104,8 +114,14 @@ export function Research() {
             >
               {open ? "Fewer publications" : "More publications"}
             </button>
-            <a className="v2-textlink" href="#">
+            <a
+              className="v2-textlink"
+              href={DR_JACQUES_CHELLY_PUBLICATION_PROFILE}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Full publication record
+              <span className="sr-only"> (opens in a new tab)</span>
             </a>
           </div>
         </div>
