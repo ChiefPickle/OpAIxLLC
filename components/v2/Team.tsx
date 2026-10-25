@@ -25,7 +25,7 @@ const team = [
   },
   {
     name: "Yan Chelly",
-    role: "Advisor, CPO AI & ML",
+    role: "CPO AI & ML",
     credentials: "",
     photo: "/home/team/yan.webp",
     bio: "AI & ML product leader with two decades of building and scaling data-driven products. Specialized in transforming complex machine-learning research into commercially successful, user-centric solutions. Known for shipping fast, aligning cross-functional teams, and driving measurable business impact across enterprise and consumer platforms.",

@@ -88,7 +88,7 @@ ${researchSectionMarkdown()}
 
 - Lorelee Chelly, Co-Founder and CEO. Builds AI tools that make clinicians more effective and elevate the accuracy and speed of patient care.
 - Dr. Jacques Chelly, Co-Founder and CMO. Anesthesiology, University of Pittsburgh. More than 30 years of clinical research. Since 2002 he has led the University of Pittsburgh's anesthesiology clinical research program, which has enrolled thousands of subjects. Author of Peripheral Nerve Blocks: A Color Atlas.
-- Yan Chelly, Advisor, CPO AI and ML. AI and ML product leader with two decades of building and scaling data-driven products.
+- Yan Chelly, CPO AI and ML. AI and ML product leader with two decades of building and scaling data-driven products.
 
 ## Contact
 

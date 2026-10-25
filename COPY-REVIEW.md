@@ -85,7 +85,7 @@ Approach “See:” links (one per capability, short title from the stored paper
 - [ ] Dr. Jacques Chelly — Co-Founder & CMO. Credentials line: “Anesthesiology, University of Pittsburgh”. [VERIFY] add MD / PhD if you want them public; they are not stated on the live site beyond “Dr.”
   - [PROPOSED] appended: “Author of *Peripheral Nerve Blocks: A Color Atlas* (Lippincott Williams & Wilkins) and holder of patents in regional anesthesia delivery.”
   - Trim log (to stay ≤55 words, now 47): cut “clinical research experience” → “clinical research”; cut “he has conducted his research at the University of Pittsburgh, where he developed the Department of Anesthesiology and Perioperative Medicine’s Clinical Research Program. Since its establishment in July 2002, the program has enrolled thousands of research subjects.” Replaced with “Since 2002 he has led the University of Pittsburgh’s anesthesiology clinical research program, which has enrolled thousands of subjects.”
-- [ ] Yan Chelly — Advisor, CPO AI & ML. Bio kept. LinkedIn omitted.
+- [ ] Yan Chelly — CPO AI & ML. Bio kept. LinkedIn omitted.
 - [ ] Confirm portrait usage rights for the three photos (reused from `/public/team`, not moved).
 
 ## Security — [VERIFY] every paragraph
